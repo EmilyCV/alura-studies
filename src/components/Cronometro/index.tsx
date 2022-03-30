@@ -12,7 +12,6 @@ interface IProps {
 
 export default function Cronometro({ selecionado, finalizarTarefa }: IProps) {
   const [tempo, setTempo] = useState<number>();
-  // const [status, setStatus] = useState<boolean>();
 
   useEffect(() => {
     if (selecionado?.tempo) {
@@ -36,7 +35,6 @@ export default function Cronometro({ selecionado, finalizarTarefa }: IProps) {
       <div className={style.relogioWrapper}>
         <Relogio tempo={tempo} />
       </div>
-      {tempo}
       <Botao onClick={() => regressiva(tempo)}>Começar</Botao>
     </div>
   );
